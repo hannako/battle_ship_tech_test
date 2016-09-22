@@ -6,8 +6,8 @@ attr_reader :ships
     @ships = []
   end
 
-  def place_ship(location)
-    @ships << Ship.new(location)
+  def place_ship(location,direction)
+    @ships << Ship.new(location,direction)
   end
 
 end
