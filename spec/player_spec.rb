@@ -11,4 +11,8 @@ describe Player do
     expect(player.ships.count).to eq 1
   end
 
+  it 'a player can only place ships on the board' do
+    expect{player.place_ship(['Z',1],"N")}.to raise_error 'not a valid location'
+  end
+
 end
