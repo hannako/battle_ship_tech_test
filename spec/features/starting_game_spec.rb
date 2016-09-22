@@ -29,9 +29,4 @@ RSpec.describe 'Preparing for the game', feature: true do
     expect{player.place_ship(['Z',1],"N")}.to raise_error 'not a valid location'
   end
 
-  # As a player
-  # So that I can win the game
-  # I would like to be able to fire at my opponent's board
-
-
 end
