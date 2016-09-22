@@ -2,9 +2,6 @@
 describe Player do
 
   subject(:player)   { described_class.new }
-  let(:board)        { double('board') }
-  let(:ship )        { double('ship') }
-  before(:each)      { allow(ship).to receive(:location).and_return(:A1) }
 
   it 'can place a ship on a board' do
     player.place_ship(['A',1], 'N')
@@ -16,11 +13,13 @@ describe Player do
   end
 
   it 'can fire at ships and gets a hit point for a hit' do
+    player.place_ship(['A',1], 'N')
     player.fire(['A',1])
     expect(player.hit_count).to eq 1
   end
 
   it 'can fire at ships and get 0 hit points for a miss' do
+    player.place_ship(['A',1], 'N')
     player.fire(['B',1])
     expect(player.hit_count).to eq 0
   end

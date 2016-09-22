@@ -15,7 +15,10 @@ attr_reader :ships, :board, :hit_count
   end
 
   def fire(location)
-    board.hits_target?(location) ? @hit_count += 1 : @hit_count
+    if board.hits_target?(location)
+      @hit_count += 1
+    else @hit_count
+    end
   end
 
 private

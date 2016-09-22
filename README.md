@@ -25,9 +25,9 @@ As a player
 So that I can have a coherent game
 I would like ships to be constrained not to overlap
 
-As a player
+<!-- As a player
 So that I can win the game
-I would like to be able to fire at my opponent's board
+I would like to be able to fire at my opponent's board -->
 
 As a player
 So that I can refine my strategy

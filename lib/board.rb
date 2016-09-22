@@ -14,8 +14,13 @@ class Board
   end
 
   def hits_target?(position)
-    ships.each do |ship|
-      ship.location == position
+    @ships.each do |ship|
+      if ship.location == position
+        ships.delete(ship)
+        return true
+      else
+        return false
+      end
     end
   end
 
