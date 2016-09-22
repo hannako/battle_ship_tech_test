@@ -15,10 +15,7 @@ attr_reader :ships, :board, :hit_count
   end
 
   def fire(location)
-    if board.hits_target?(location)
-      @hit_count += 1
-    else @hit_count
-    end
+    board.hits_target?(location) ? (@hit_count += 1 ): 'you missed!'
   end
 
 private

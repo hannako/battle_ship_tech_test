@@ -20,8 +20,8 @@ describe Player do
 
   it 'can fire at ships and get 0 hit points for a miss' do
     player.place_ship(['A',1], 'N')
-    player.fire(['B',1])
     expect(player.hit_count).to eq 0
+    expect(player.fire(['B',1])).to eq('you missed!') 
   end
 
 
